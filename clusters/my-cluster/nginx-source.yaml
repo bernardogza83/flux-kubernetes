@@ -8,4 +8,4 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  url: ssh://git@github.com/bernardogza83/nginx
+  url: https://github.com/bernardogza83/nginx.git

@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: https://github.com/bernardogza83/flux-kubernetes.git
+  url: ssh://git@github.com/bernardogza83/flux-kubernetes.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization

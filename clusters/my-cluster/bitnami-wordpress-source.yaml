@@ -1,0 +1,21 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: wordpress
+  namespace: default
+spec:
+  releaseName: wordpress
+  chart:
+    repositoryRef:
+      name: bitnami
+    name: wordpress
+    version: 10.4.2  # Specify the desired version of the Bitnami WordPress chart
+  values:
+    wordpressUsername: admin
+    wordpressPassword: test123
+    mariadb:
+      auth:
+        rootPassword: test123
+  targetNamespace: default
+  install: true
+  upgrade: true
